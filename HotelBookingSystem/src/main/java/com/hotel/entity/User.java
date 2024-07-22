@@ -1,10 +1,13 @@
 package com.hotel.entity;
 
+import org.hibernate.validator.constraints.UniqueElements;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
@@ -15,20 +18,63 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
+//@AllArgsConstructor
+@Table(name = "user")
 public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer uId;
-	@NotEmpty
+	private Integer userId;
+
 	@Email
-	private String uEmail;
-	@NotEmpty
+	@Column(unique = true,nullable = false)
+	private String userEmail;
+
+	@Column(unique = true)
 	@Size(min = 4, max = 30)
-	private String uName;
-	@NotEmpty
+	private String userName;
+
+	@Column(nullable  = true)
 	@Size(min = 6)
-	private String uPassword;
-	
+	private String userPassword;
+
+//	public Integer getUserId() {
+//		return userId;
+//	}
+//
+//	public String getUserEmail() {
+//		return userEmail;
+//	}
+//
+//	public void setUserName(String userName) {
+//		this.userName = userName;
+//	}
+//
+//	public String getUserPassword() {
+//		return userPassword;
+//	}
+//
+//	public void setUserId(Integer userId) {
+//		this.userId = userId;
+//	}
+//
+//	public void setUserEmail(String userEmail) {
+//		this.userEmail = userEmail;
+//	}
+//	
+//	public String getUserName() {
+//		return userName;
+//	}
+//
+//	public void setUserPassword(String userPassword) {
+//		this.userPassword = userPassword;
+//	}
+
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", userEmail=" + userEmail
+				+ ", userName=" + userName + ", userPassword=" + userPassword
+				+ "]";
+	}
+
 }
