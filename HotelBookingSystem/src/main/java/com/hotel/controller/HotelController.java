@@ -5,15 +5,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HotelController {
-	
-	@GetMapping("/index")
+
+	@GetMapping("/")
 	public String indexPage() {
 		System.out.println("HotelController.indexPage()");
-		return "index.html";
+		return "index";
 	}
 	@GetMapping("/hello")
 	public String boilerPlate() {
-		return "boilerPlate2";
+		return "boilerPlate";
 	}
 
 }

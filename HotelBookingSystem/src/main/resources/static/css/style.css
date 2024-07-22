@@ -1,4 +1,4 @@
-f@charset "utf-8";
+@charset "utf-8";
 /*======================================
  [ -Main Stylesheet-
   Theme: EasyBook
@@ -220,7 +220,7 @@ transform: rotate(360deg);
 }
 .box-item:before {
 	content:'';
-	position:absolute;l
+	position:absolute;
 	top:0;
 	left:0;
 	width:100%;
@@ -526,6 +526,7 @@ transform: rotate(360deg);
 .show-reg-form i  {
 	padding-right:10px;
 }
+
 .show-search-button {
 	color:#fff;
 	float:right;
@@ -537,7 +538,6 @@ transform: rotate(360deg);
 	font-size:13px;
 	cursor:pointer;
 	font-weight:500;
-	border-right:1px solid rgba(0,0,0,0.21);
 	box-sizing:border-box;
 }
 .wishlist-link {
@@ -601,10 +601,12 @@ transform: rotate(360deg);
 	position:relative;
 	top:1px;
 }
+
 .show-search-button i.vis-head-search-close:before , .wishlist-link.scwllink i:before {
 	font-family: Font Awesome\ 5 Pro;
 	content: "\f00d";
-}
+} 
+/*
 .show-search-button:before {
 	content:'';
 	position:absolute;
@@ -614,6 +616,7 @@ transform: rotate(360deg);
 	width:1px;
 	background:rgba(0,0,0,0.21);
 }
+*/
 .lang-wrap  , .currency-wrap{
 	float:right;
 	margin-right:40px;
@@ -3065,7 +3068,7 @@ input[type=number]
 }
 #singleMap    {
 	width:100%;
-	position: ;
+	/*position: ;*/
 	height:300px;
 	float:left;
 	margin-bottom:30px;
