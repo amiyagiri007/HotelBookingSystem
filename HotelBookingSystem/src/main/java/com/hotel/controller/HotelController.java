@@ -2,6 +2,10 @@ package com.hotel.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.hotel.entity.User;
 
 @Controller
 public class HotelController {
@@ -11,9 +15,12 @@ public class HotelController {
 		System.out.println("HotelController.indexPage()");
 		return "index";
 	}
-	@GetMapping("/hello")
-	public String boilerPlate() {
-		return "boilerPlate";
+	
+	@GetMapping("/registerform")
+	public ModelAndView handleRegistration(@ModelAttribute User user) {
+		System.out.println("UserController.handleRegistration()");
+		System.out.println("Name: "+user.getUserName());
+		return new ModelAndView("redirect:/");
 	}
 
 }

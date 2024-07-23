@@ -1377,7 +1377,8 @@
                                     <div id="tab-2" class="tab-content">
                                         <h3>Sign Up <span>Easy<strong>Book</strong></span></h3>
                                         <div class="custom-form">
-                                            <form method="post"   name="registerform" class="main-register-form" id="main-register-form2">
+                                            <form method="post"  action ="registerform"  name="registerform" 
+                                            class="main-register-form" id="main-register-form2">
                                                 <label >Full Name <span>*</span> </label>
                                                 <input name="name" type="text"   onClick="this.select()" value="">
                                                 <label>Email Address <span>*</span></label>
