@@ -10,6 +10,7 @@ import com.hotel.entity.User;
 @Controller
 public class HotelController {
 
+<<<<<<< HEAD
 	@GetMapping("/")
 	public String indexPage() {
 		System.out.println("HotelController.indexPage()");
@@ -22,5 +23,8 @@ public class HotelController {
 		System.out.println("Name: "+user.getUserName());
 		return new ModelAndView("redirect:/");
 	}
+=======
+	
+>>>>>>> e1376339b397681ad23dcec53e1f09aa9ea1d394
 
 }
