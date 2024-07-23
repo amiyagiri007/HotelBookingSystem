@@ -6,14 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HotelController {
 
-	@GetMapping("/")
-	public String indexPage() {
-		System.out.println("HotelController.indexPage()");
-		return "index";
-	}
-	@GetMapping("/hello")
-	public String boilerPlate() {
-		return "boilerPlate";
-	}
+	
 
 }

@@ -1,6 +1,11 @@
 package com.hotel.entity;
 
-import org.hibernate.validator.constraints.UniqueElements;
+import java.util.Collection;
+import java.util.Collections;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,18 +14,18 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.AccessLevel;
+
 
 @Entity
 @Getter
 @Setter
 //@AllArgsConstructor
 @Table(name = "user")
-public class User {
+public class User implements UserDetails{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,49 +37,34 @@ public class User {
 
 	@Column(unique = true)
 	@Size(min = 4, max = 30)
-	private String userName;
+    @Setter( AccessLevel.NONE)
+	@Getter( AccessLevel.NONE)
+	private String username;
 
 	@Column(nullable  = true)
 	@Size(min = 6)
-	private String userPassword;
-
-//	public Integer getUserId() {
-//		return userId;
-//	}
-//
-//	public String getUserEmail() {
-//		return userEmail;
-//	}
-//
-//	public void setUserName(String userName) {
-//		this.userName = userName;
-//	}
-//
-//	public String getUserPassword() {
-//		return userPassword;
-//	}
-//
-//	public void setUserId(Integer userId) {
-//		this.userId = userId;
-//	}
-//
-//	public void setUserEmail(String userEmail) {
-//		this.userEmail = userEmail;
-//	}
-//	
-//	public String getUserName() {
-//		return userName;
-//	}
-//
-//	public void setUserPassword(String userPassword) {
-//		this.userPassword = userPassword;
-//	}
-
+	private String userpassword;
+	
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", userEmail=" + userEmail
-				+ ", userName=" + userName + ", userPassword=" + userPassword
+				+ ", username=" + username + ", userpassword=" + userpassword
 				+ "]";
+	}
+
+	@Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"));
+    }
+
+	@Override
+	public String getPassword() {
+		return userpassword;
+	}
+
+	@Override
+	public String getUsername() {
+		return username;
 	}
 
 }
