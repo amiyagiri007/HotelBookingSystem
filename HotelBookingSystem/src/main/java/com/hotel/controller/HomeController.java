@@ -2,7 +2,11 @@ package com.hotel.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.hotel.entity.User;
 
 @Controller
 public class HomeController {
@@ -12,16 +16,11 @@ public class HomeController {
 		return "index";
 	}
 	
-	@PostMapping("/hello")
-	public String helloPage() {
-		System.out.println("HomeController.helloPage()");
-		return "about";
-	}
-	
-	@GetMapping("/zpage")
-	public String ZPage() {
-		System.out.println("HomeController.ZPage()");
-		return "ztemp";
+	@GetMapping("/registerform")
+	public ModelAndView handleRegistration(@ModelAttribute User user) {
+		System.out.println("UserController.handleRegistration()");
+		System.out.println("Name: "+user.getUsername());
+		return new ModelAndView("redirect:/");
 	}
 	
 }
