@@ -1354,7 +1354,7 @@
                                 <div id="tab-1" class="tab-content">
                                     <h3>Sign In <span>Easy<strong>Book</strong></span></h3>
                                     <div class="custom-form">
-                                        <form method="get"  name="registerform">
+                                        <form method="get"  action = "login" name="registerform">
                                             <label>Username or Email Address <span>*</span> </label>
                                             <input name="userEmail" type="text"   onClick="this.select()" value="">
                                             <label >Password <span>*</span> </label>
