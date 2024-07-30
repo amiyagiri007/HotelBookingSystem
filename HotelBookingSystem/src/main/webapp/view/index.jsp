@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
     
-<!-- Mirrored from easybook.kwst.net/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jul 2024 15:36:52 GMT -->
 <head>
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
@@ -29,167 +28,80 @@
         <!-- Main  -->
         <div id="main">
             <!-- header-->
-            <header class="main-header">
+            <header class="main-header" style="height:60px; ">
                 <!-- header-top-->
                 <div class="header-top fl-wrap">
                     <div class="container">
                         <div class="logo-holder">
                             <a href="index.html"><img src="images/logo.png" alt=""></a>
                         </div>
-                        <a href="dashboard-add-listing.html" class="add-hotel">Add Your Hotel <span><i class="far fa-plus"></i></span></a>
-                        <div class="show-reg-form modal-open"><i class="fa fa-sign-in"></i>Sign In</div>
-                        <div class="lang-wrap">
-                            <div class="show-lang"><img src="images/lan/1.png" alt=""> <span>Eng</span><i class="fa fa-caret-down"></i></div>
-                            <ul class="lang-tooltip green-bg">
-                                <li><a href="#"><img src="images/lan/4.png" alt=""> De</a></li>
-                                <li><a href="#"><img src="images/lan/5.png" alt=""> It</a></li>
-                                <li><a href="#"><img src="images/lan/2.png" alt=""> Fr</a></li>
-                                <li><a href="#"><img src="images/lan/3.png" alt=""> Es</a></li>
-                            </ul>
+                        <div class="container">
+                            
+                             <div class="show-search-button"><span>Search</span> <i class="fas fa-search"></i> </div>
+                            <!--
+                            <div class="wishlist-link"><i class="fal fa-heart"></i><span class="wl_counter">3</span></div>
+                            
+                            <div class="header-user-menu">
+                                <div class="header-user-name">
+                                    <span><img src="images/avatar/4.jpg" alt=""></span>
+                                    My account
+                                </div>
+                                <ul>
+                                    <li><a href="dashboard-myprofile.html"> Edit profile</a></li>
+                                    <li><a href="dashboard-add-listing.html"> Add Listing</a></li>
+                                    <li><a href="dashboard-bookings.html">  Bookings  </a></li>
+                                    <li><a href="dashboard-review.html"> Reviews </a></li>
+                                    <li><a href="#">Log Out</a></li>
+                                </ul>
+                            </div> 
+                           -->
+                           
+
+                            <!-- wishlist-wrap-->
+                             <!--
+                            <div class="wishlist-wrap scrollbar-inner novis_wishlist">
+                                <div class="box-widget-content">
+                                    <div class="widget-posts fl-wrap">
+                                        <ul>
+                                            <li class="clearfix">
+                                                <a href="#"  class="widget-posts-img"><img src="images/gal/7.jpg" class="respimg" alt=""></a>
+                                                <div class="widget-posts-descr">
+                                                    <a href="#" title="">Park Central</a>
+                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
+                                                    <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i> 40 JOURNAL SQUARE PLAZA, NJ, US</a></div>
+                                                    <span class="rooms-price">$80 <strong> /  Awg</strong></span>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <a href="#"  class="widget-posts-img"><img src="images/gal/8.jpg" class="respimg" alt=""></a>
+                                                <div class="widget-posts-descr">
+                                                    <a href="#" title="">Holiday Home</a>
+                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="3"></div>
+                                                    <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i> 75 PRINCE ST, NY, USA</a></div>
+                                                    <span class="rooms-price">$50 <strong> /   Awg</strong></span>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <a href="#"  class="widget-posts-img"><img src="images/gal/9.jpg" class="respimg" alt=""></a>
+                                                <div class="widget-posts-descr">
+                                                    <a href="#" title="">Moonlight Hotel</a>
+                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="4"></div>
+                                                    <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i>  70 BRIGHT ST NEW YORK, USA</a></div>
+                                                    <span class="rooms-price">$105 <strong> /  Awg</strong></span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        -->
+                            <!-- wishlist-wrap end-->
+                           <a href="/login_form" class="show-reg-form"> <i class="fa fa-sign-in"></i>Sign In</a>
                         </div>
-                        <div class="currency-wrap">
-                            <div class="show-currency-tooltip"><i class="fas fa-dollar-sign"></i> <span>USD <i class="fa fa-caret-down"></i> </span></div>
-                            <ul class="currency-tooltip">
-                                <li><a href="#"><i class="far fa-euro-sign"></i> EUR</a></li>
-                                <li><a href="#"><i class="far fa-pound-sign"></i> GBP</a></li>
-                                <li><a href="#"><i class="far fa-ruble-sign"></i>RUR</a></li>
-                            </ul>
-                        </div>
+                       
                     </div>
                 </div>
                 <!-- header-top end-->
-                <!-- header-inner-->
-                <div class="header-inner fl-wrap">
-                    <div class="container">
-                        <div class="show-search-button"><span>Search</span> <i class="fas fa-search"></i> </div>
-                        <div class="wishlist-link"><i class="fal fa-heart"></i><span class="wl_counter">3</span></div>
-                        <div class="header-user-menu">
-                            <div class="header-user-name">
-                                <span><img src="images/avatar/4.jpg" alt=""></span>
-                                My account
-                            </div>
-                            <ul>
-                                <li><a href="dashboard-myprofile.html"> Edit profile</a></li>
-                                <li><a href="dashboard-add-listing.html"> Add Listing</a></li>
-                                <li><a href="dashboard-bookings.html">  Bookings  </a></li>
-                                <li><a href="dashboard-review.html"> Reviews </a></li>
-                                <li><a href="#">Log Out</a></li>
-                            </ul>
-                        </div>
-                        <div class="home-btn"><a href="index.html"><i class="fas fa-home"></i></a></div>
-                        <!-- nav-button-wrap-->
-                        <div class="nav-button-wrap color-bg">
-                            <div class="nav-button">
-                                <span></span><span></span><span></span>
-                            </div>
-                        </div>
-                        <!-- nav-button-wrap end-->
-                        <!--  navigation -->
-                        <div class="nav-holder main-menu">
-                            <nav>
-                                <ul>
-                                    <li>
-                                        <a href="#" class="act-link">Home <i class="fas fa-caret-down"></i></a>
-                                        <!--second level -->
-                                        <ul>
-                                            <li><a href="index.html">Parallax Image</a></li>
-                                            <li><a href="index2.html">Slider</a></li>
-                                            <li><a href="index3.html">Video</a></li>
-                                            <li><a href="index4.html">Slideshow</a></li>
-                                        </ul>
-                                        <!--second level end-->
-                                    </li>
-                                    <li>
-                                        <a href="#">Listings <i class="fas fa-caret-down"></i></a>
-                                        <!--second level -->
-                                        <ul>
-                                            <li><a href="listing.html">Column map</a></li>
-                                            <li><a href="listing6.html">Column map 2</a></li>
-                                            <li><a href="listing2.html">Fullwidth Map</a></li>
-                                            <li><a href="listing3.html">Fullwidth Map 2</a></li>
-                                            <li><a href="listing4.html">Without Map</a></li>
-                                            <li><a href="listing5.html">Without Map 2</a></li>
-                                            <li>
-                                                <a href="#">Single <i class="fas fa-caret-down"></i></a>
-                                                <!--third  level  -->
-                                                <ul>
-                                                    <li><a href="listing-single.html">Style 1</a></li>
-                                                    <li><a href="listing-single2.html">Style 2</a></li>
-                                                    <li><a href="listing-single3.html">Style 3</a></li>
-                                                    <li><a href="listing-single4.html">Style 4</a></li>
-                                                </ul>
-                                                <!--third  level end-->
-                                            </li>
-                                        </ul>
-                                        <!--second level end-->
-                                    </li>
-                                    <li>
-                                        <a href="blog.html">News</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Pages <i class="fas fa-caret-down"></i></a>
-                                        <!--second level -->
-                                        <ul>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="contacts.html">Contacts</a></li>
-                                            <li><a href="author-single.html">User single</a></li>
-                                            <li><a href="help.html">Help FAQ</a></li>
-                                            <li><a href="pricing-tables.html">Pricing</a></li>
-                                            <li><a href="booking-single.html">Booking</a></li>
-                                            <li><a href="dashboard.html">User Dashboard</a></li>
-                                            <li><a href="blog2.html">Blog Classik</a></li>
-                                            <li><a href="blog-single.html">Blog Single</a></li>
-                                            <li><a href="dashboard-add-listing.html">Add Listing</a></li>
-                                            <li><a href="404.html">404</a></li>
-                                            <li><a href="invoice.html">Invoice</a></li>
-                                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                                        </ul>
-                                        <!--second level end-->
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <!-- navigation  end -->
-                        <!-- wishlist-wrap-->
-                        <div class="wishlist-wrap scrollbar-inner novis_wishlist">
-                            <div class="box-widget-content">
-                                <div class="widget-posts fl-wrap">
-                                    <ul>
-                                        <li class="clearfix">
-                                            <a href="#"  class="widget-posts-img"><img src="images/gal/7.jpg" class="respimg" alt=""></a>
-                                            <div class="widget-posts-descr">
-                                                <a href="#" title="">Park Central</a>
-                                                <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
-                                                <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i> 40 JOURNAL SQUARE PLAZA, NJ, US</a></div>
-                                                <span class="rooms-price">$80 <strong> /  Awg</strong></span>
-                                            </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <a href="#"  class="widget-posts-img"><img src="images/gal/8.jpg" class="respimg" alt=""></a>
-                                            <div class="widget-posts-descr">
-                                                <a href="#" title="">Holiday Home</a>
-                                                <div class="listing-rating card-popup-rainingvis" data-starrating2="3"></div>
-                                                <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i> 75 PRINCE ST, NY, USA</a></div>
-                                                <span class="rooms-price">$50 <strong> /   Awg</strong></span>
-                                            </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <a href="#"  class="widget-posts-img"><img src="images/gal/9.jpg" class="respimg" alt=""></a>
-                                            <div class="widget-posts-descr">
-                                                <a href="#" title="">Moonlight Hotel</a>
-                                                <div class="listing-rating card-popup-rainingvis" data-starrating2="4"></div>
-                                                <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i>  70 BRIGHT ST NEW YORK, USA</a></div>
-                                                <span class="rooms-price">$105 <strong> /  Awg</strong></span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- wishlist-wrap end-->
-                    </div>
-                </div>
-                <!-- header-inner end-->
                 <!-- header-search -->
                 <div class="header-search vis-search">
                     <div class="container">
@@ -252,7 +164,7 @@
             </header>
             <!--  header end -->
             <!--  wrapper  -->
-            <div id="wrapper">
+            <div id="wrapper" style="padding-top:60px;">
                 <!-- content-->
                 <div class="content">
                     <!--section -->
@@ -1337,71 +1249,7 @@
                 </div>
             </div>
             <!--map-modal end -->
-            <!--register form -->
-            <div class="main-register-wrap modal">
-                <div class="reg-overlay"></div>
-                <div class="main-register-holder">
-                    <div class="main-register fl-wrap">
-                        <div class="close-reg color-bg"><i class="fal fa-times"></i></div>
-                        <ul class="tabs-menu">
-                            <li class="current"><a href="#tab-1"><i class="fal fa-sign-in-alt"></i> Login</a></li>
-                            <li><a href="#tab-2"><i class="fal fa-user-plus"></i> Register</a></li>
-                        </ul>
-                        <!--tabs -->
-                        <div id="tabs-container">
-                            <div class="tab">
-                                <!--tab -->
-                                <div id="tab-1" class="tab-content">
-                                    <h3>Sign In <span>Easy<strong>Book</strong></span></h3>
-                                    <div class="custom-form">
-                                        <form method="get"  name="registerform">
-                                            <label>Username or Email Address <span>*</span> </label>
-                                            <input name="userEmail" type="text"   onClick="this.select()" value="">
-                                            <label >Password <span>*</span> </label>
-                                            <input name="userPassword" type="password"   onClick="this.select()" value="" >
-                                            <button type="submit"  class="log-submit-btn color-bg"><span>Log In</span></button>
-                                            <div class="clearfix"></div>
-                                            <div class="filter-tags">
-                                                <input id="check-a" type="checkbox" name="check">
-                                                <label for="check-a">Remember me</label>
-                                            </div>
-                                        </form>
-                                        <div class="lost_password">
-                                            <a href="#">Lost Your Password?</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--tab end -->
-                                <!--tab -->
-                                <div class="tab">
-                                    <div id="tab-2" class="tab-content">
-                                        <h3>Sign Up <span>Easy<strong>Book</strong></span></h3>
-                                        <div class="custom-form">
-                                            <form method="post"  action="../registerform"  class="main-register-form" id="main-register-form2">
-                                                <label >Full Name <span>*</span> </label>
-                                                <input name="username" type="text"  value="">
-                                                <label>Email Address <span>*</span></label>
-                                                <input name="UserEmail" type="text"  value="">
-                                                <label >Password <span>*</span></label>
-                                                <input name="userpassword" type="password" value="" >
-                                                <input type="submit"  value="Register" class="log-submit-btn color-bg">
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--tab end -->
-                            </div>
-                            <!--tabs end -->
-                            <div class="log-separator fl-wrap"><span>or</span></div>
-                            <div class="soc-log fl-wrap">
-                                <p>For faster login or register use your social account.</p>
-                                <a href="#" class="facebook-log"><i class="fab fa-facebook-f"></i>Connect with Facebook</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--register form end -->
+            
             <a class="to-top"><i class="fas fa-caret-up"></i></a>
         </div>
         <!-- Main end -->
@@ -1410,8 +1258,7 @@
         <script type="text/javascript" src="js/plugins.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwJSRi0zFjDemECmFl9JtRj1FY7TiTRRo&amp;libraries=places&amp;callback=initAutocomplete"></script>
-        <script type="text/javascript" src="js/map-single.js"></script>
+        <script type="text/javascript" src="js/map-single.js"></script> 
     </body>
 
-<!-- Mirrored from easybook.kwst.net/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jul 2024 15:38:50 GMT -->
 </html>

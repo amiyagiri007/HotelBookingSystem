@@ -9,7 +9,8 @@ import java.util.List;
 
 @Repository
 public interface UserRepository  extends JpaRepository<User,Integer>{
-	User findByusername(String userName);
+//	User findByuser(String userEmail);
+	User findByUserEmail(String userEmail);
 	
 //	findby is keyword + UserName is you variable name in entity class
 }

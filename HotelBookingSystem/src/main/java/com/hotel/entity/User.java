@@ -7,11 +7,16 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Size;
@@ -37,13 +42,17 @@ public class User implements UserDetails{
 
 	@Column(unique = true)
 	@Size(min = 4, max = 30)
-    @Setter( AccessLevel.NONE)
 	@Getter( AccessLevel.NONE)
 	private String username;
 
 	@Column(nullable  = true)
 	@Size(min = 6)
 	private String userpassword;
+	
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "role_id")
+    private Role role;
 	
 	@Override
 	public String toString() {

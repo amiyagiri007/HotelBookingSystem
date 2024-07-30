@@ -11,36 +11,62 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import com.hotel.entity.Role;
 import com.hotel.entity.User;
+import com.hotel.repository.RoleRepository;
 import com.hotel.repository.UserRepository;
 
-
 @Service
-public class UserService implements UserDetailsService{
+public class UserService implements UserDetailsService {
 
 	@Autowired
 	private UserRepository userRepository;
-	
+
+	@Autowired
+	private RoleRepository roleRepository;
+
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
-	public void saveUser(User user) {
-		String encodePassword=passwordEncoder.encode(user.getPassword());
+//	register user
+	public void registerUser(User user) {
+		user.setUsername(user.getUsername());
+		
+		String encodePassword = passwordEncoder.encode(user.getPassword());
 		user.setUserpassword(encodePassword);
+
+		Role role = roleRepository.findByRoleName("USER").orElseThrow(() -> new RuntimeException("Role not found"));
+		user.setRole(role);
+		System.err.println("user is registter with username "+user.getUsername());
 		userRepository.save(user);
 	}
-	
-	public User findByUsername(String uName) {
-		return userRepository.findByusername(uName);
+
+//	public User findByUsername(String uName) {
+//		return userRepository.findByUserEmail(uName);
+//	}
+
+//	taking help loadUserByUsername for login
+	@Override
+	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+	    System.out.println("Attempting to load user with email: " + email);
+	    User user = userRepository.findByUserEmail(email);
+	    if (user == null) {
+	        System.err.println("User not found with email: " + email);
+	        throw new UsernameNotFoundException("User not found with email: " + email);
+	    }
+	    System.out.println("User found: " + user.getUserEmail());
+	    return org.springframework.security.core.userdetails.User
+                .withUsername(user.getUserEmail())
+                .password(user.getPassword())
+                .roles(user.getRole().getRoleName())
+                .build();
 	}
 
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = userRepository.findByusername(username);
-        if (user == null) {
-            throw new UsernameNotFoundException("User not found");
-        }
-        return user;
+	//	login user
+	public  void loginUser(String email) {
+		System.err.println("loginUser method");
+		loadUserByUsername(email);
+		
 	}
-	
+
 }
