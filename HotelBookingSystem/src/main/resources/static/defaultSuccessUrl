@@ -1,0 +1,43 @@
+The .defaultSuccessUrl("/home", true) method:
+.defaultSuccessUrl("/home", true) configures where Spring Security should redirect a user after a successful login. The method takes two parameters:
+
+The first parameter ("/home" in this case) is the URL to redirect to after a successful login.
+The second parameter (true in this case) is a boolean that determines the redirect behavior.
+
+The boolean parameter is particularly important:
+
+When set to true:
+
+The user will always be redirected to the specified URL ("/home") after a successful login, regardless of where they were trying to access before being prompted to log in.
+This is useful when you want users to always land on a specific page (like a dashboard) after logging in.
+
+
+When set to false (or omitted, as false is the default):
+
+If the user was trying to access a specific page before being prompted to log in, they will be redirected to that original page after successful authentication.
+If there was no prior request (e.g., user went directly to the login page), then they will be redirected to the specified URL.
+
+
+
+Example scenarios:
+
+With true:
+
+User tries to access /profile, gets redirected to login
+After successful login, user goes to /home
+
+
+With false:
+
+User tries to access /profile, gets redirected to login
+After successful login, user goes back to /profile
+
+
+With false, but direct login:
+
+User goes directly to login page
+After successful login, user goes to /home
+
+
+
+This method allows you to control the post-login user experience, balancing between a consistent landing page and preserving the user's intended destination.

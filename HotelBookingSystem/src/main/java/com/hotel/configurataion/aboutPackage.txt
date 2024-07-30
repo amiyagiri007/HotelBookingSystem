@@ -1,1 +1,0 @@
-This package provide all type configuration(web/bean/mvc/boot configuration)
