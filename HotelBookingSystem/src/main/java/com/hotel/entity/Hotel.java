@@ -41,7 +41,8 @@ import lombok.Setter;
 public class Hotel  implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer hotelId;
+	@Column(name = "hotel_id")
+	private Integer Id;
 	@NotEmpty
 	private String hotelName;
 	
@@ -52,6 +53,9 @@ public class Hotel  implements Serializable{
 	
 	@CreationTimestamp
 	private LocalDate registerDate;
+	
+	@OneToMany(mappedBy = "hotel")
+	private List<Booking> bookings;
 	
 	@NotEmpty
 	@Size(max = 30)
@@ -77,6 +81,6 @@ public class Hotel  implements Serializable{
 	@ElementCollection(fetch = FetchType.EAGER)
 	private Map<String, String> socials;
 
-	
+	@Column(name = "hotel_type")
 	private String hotelType;
 }

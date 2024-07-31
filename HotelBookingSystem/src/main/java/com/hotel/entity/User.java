@@ -25,6 +25,7 @@ import lombok.AccessLevel;
 
 @Entity
 @Getter
+
 @Setter
 //@AllArgsConstructor
 @Table(name = "user")
