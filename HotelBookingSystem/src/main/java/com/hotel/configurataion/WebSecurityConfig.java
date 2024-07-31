@@ -30,7 +30,7 @@ public class WebSecurityConfig {
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(authz -> authz																							// user to restricts based on role/without role.
-                .requestMatchers("/", "/home", "/register_form", "/login_form","/view/login.jsp","/view/index.jsp","/view/register.jsp","/view/**/*.jsp","/forgot").permitAll()				// Allowing home and form handler to access to anyone.
+                .requestMatchers("/", "/home", "/register_form","/register_process", "/login_form","/perform_login","/view/login.jsp","/view/index.jsp","/view/register.jsp","/view/**/*.jsp","/forgot").permitAll()				// Allowing home and form handler to access to anyone.
                 .requestMatchers("/assets/**","/images/**","/css/**","/js/**","/fonts/**","/webfonts/**").permitAll()						// Allowing my assets and resources to access to anyone.
                 .requestMatchers("/perform_logout").authenticated()																					// Only authenticated user can access the logout
                 .anyRequest().authenticated()																								// Other handlers/resources to be authenticated.
